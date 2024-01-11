@@ -2,8 +2,6 @@ pipeline {
 
   agent any
 
-
-
   stages {
 
     stage('Verify Branch Stage') {
@@ -11,12 +9,7 @@ pipeline {
       steps {
 
         echo $GIT_BRANCH
-
       }
-
     }  
-
   }
-
 }
-
