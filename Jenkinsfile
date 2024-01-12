@@ -3,12 +3,12 @@ pipeline {
   agent any
 
   stages {
-
     stage('Verify Branch Stage') {
       steps {
         echo "$GIT_BRANCH"
       }
-      stage('Docker build'){
+    }
+    stage('Docker build'){
         steps {
           pwsh(script: 'docker images -a')
           pwsh(script: """
@@ -22,5 +22,4 @@ pipeline {
       }
     }
    }
-  }
     
